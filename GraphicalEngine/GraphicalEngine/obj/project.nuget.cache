@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9EzlcFH/QrxzCsO/3/Vm9nE5/D90COJKKEDAxXBzC7M8B++A6ZEY/mw3tylitbxS20eTfZqj2tL8plhO29mkkA==",
+  "success": true,
+  "projectFilePath": "G:\\GIT\\GraphicalEngine\\GraphicalEngine\\GraphicalEngine\\GraphicalEngine.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\guilh\\.nuget\\packages\\sayers.sdl2.core\\1.0.11\\sayers.sdl2.core.1.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}
