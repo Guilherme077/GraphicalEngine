@@ -1,4 +1,5 @@
 ﻿using GraphicalEngine.Controllers;
+using GraphicalEngine.Figures.D3;
 using GraphicalEngine.Sys;
 using SDL2;
 using System;
@@ -16,7 +17,8 @@ class Program
 
         //Config Controllers
         Controller2D.defautRender = renderer;
-        
+
+        CubeFig cubeFig = new CubeFig(renderer, 300, 400, 300, 100, 400, 100, 255, 0, 0, 255, 200, 0);
 
         //LOOP 
         bool quit = false;
@@ -38,8 +40,14 @@ class Program
                 }
             }
 
-            Controller2D.LoadDefautAnimation();
-           
+            // Limpar tela
+            SDL.SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+            SDL.SDL_RenderClear(renderer);
+
+
+            cubeFig.RotX++;
+            cubeFig.Draw();
+
             SDL.SDL_RenderPresent(renderer);
             SDL.SDL_Delay(16); //60 FPS
         }
