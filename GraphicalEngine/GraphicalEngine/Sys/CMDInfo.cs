@@ -26,9 +26,19 @@ namespace GraphicalEngine.Sys
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.BackgroundColor = ConsoleColor.White;
                 Console.Clear();
-                Console.WriteLine("FPS: " + frameInSecond);
-                Console.WriteLine("Total Frames: " + totalFrames);
-                Console.WriteLine("Time: " + Now);
+                Console.WriteLine(" GRAPHICAL ENGINE");
+                Console.WriteLine(" FPS: " + frameInSecond);
+                Console.WriteLine(" Total Frames: " + totalFrames);
+                Console.WriteLine(" CONTROLS:");
+                Console.WriteLine();
+                Console.WriteLine(" Cube:");
+                Console.WriteLine(" W A S D  -> Rotation");
+                Console.WriteLine("   Setas  -> Movement");
+                Console.WriteLine("       Z  -> Default Rotation");
+                Console.WriteLine();
+                Console.WriteLine(" Application:");
+                Console.WriteLine("       X  -> Change Max FPS (30/60)");
+
                 frameInSecond = 0;
                 time = DateTime.Now;
             }

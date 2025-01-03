@@ -63,37 +63,34 @@ namespace GraphicalEngine.Figures.D3
             };
         }
 
-        // Arestas do cubo (pares de índices dos vértices)
+        // Cube edges
         int[,] edges = {
-            { 0, 1 }, { 1, 2 }, { 2, 3 }, { 3, 0 }, // Base inferior
-            { 4, 5 }, { 5, 6 }, { 6, 7 }, { 7, 4 }, // Base superior
-            { 0, 4 }, { 1, 5 }, { 2, 6 }, { 3, 7 }  // Conexões entre bases
+            { 0, 1 }, { 1, 2 }, { 2, 3 }, { 3, 0 }, 
+            { 4, 5 }, { 5, 6 }, { 6, 7 }, { 7, 4 }, 
+            { 0, 4 }, { 1, 5 }, { 2, 6 }, { 3, 7 }  
         };
 
-        // Ângulos de rotação
-        float angleX = 0, angleY = 0;
-
-        // Função para projetar os pontos 3D no plano 2D
+        // Function to convert 3D points to 2D
         public (int x, int y) project(float x, float y, float z)
         {
-            float scale = Distance / (z + Distance); // Simulação de perspectiva
-            int screenX = (int)(x * scale) + PosX; // Ajuste para centralizar na tela
+            float scale = Distance / (z + Distance); // Perspective simulation
+            int screenX = (int)(x * scale) + PosX; // Position
             int screenY = (int)(y * scale) + PosY;
             return (screenX, screenY);
         }
 
 
 
-        // Função para aplicar rotação nos vértices
+        // Apply rotation
         float[] Rotate(float x, float y, float z, float angleX, float angleY)
         {
-            // Rotação em torno do eixo X
+            // X
             float sinX = (float)Math.Sin(angleX);
             float cosX = (float)Math.Cos(angleX);
             float y1 = cosX * y - sinX * z;
             float z1 = sinX * y + cosX * z;
 
-            // Rotação em torno do eixo Y
+            // Y
             float sinY = (float)Math.Sin(angleY);
             float cosY = (float)Math.Cos(angleY);
             float x1 = cosY * x + sinY * z1;
@@ -109,24 +106,27 @@ namespace GraphicalEngine.Figures.D3
 
         public void Draw()
         {
-            // Desenhar cubo
+            SDL.SDL_SetRenderDrawColor(Render, 0, 0, 255, 0);
+            SDL.SDL_RenderDrawPoint(Render, PosX, PosY);
+            // Draw all the Cube lines
             SDL.SDL_SetRenderDrawColor(Render, R, G, B, A);
-            for (int i = 0; i < edges.GetLength(0); i++)
+            for (int i = 0; i < edges.GetLength(0); i++) //For each line (edge)
             {
                 int v1 = edges[i, 0];
                 int v2 = edges[i, 1];
                 
-                // Aplicar rotação nos vértices
+                // Add rotation
                 var rotatedV1 = Rotate(Vertices[v1, 0], Vertices[v1, 1], Vertices[v1, 2], ConvertAngle(RotX), ConvertAngle(RotY));
                 var rotatedV2 = Rotate(Vertices[v2, 0], Vertices[v2, 1], Vertices[v2, 2], ConvertAngle(RotX), ConvertAngle(RotY));
 
-                // Projeção 2D
+                // Get the 2D coordenates
                 var (x1, y1) = project(rotatedV1[0], rotatedV1[1], rotatedV1[2]);
                 var (x2, y2) = project(rotatedV2[0], rotatedV2[1], rotatedV2[2]);
 
-                // Desenhar linha
+                // Draw the line
                 SDL.SDL_RenderDrawLine(Render, x1, y1, x2, y2);
             }
+            SDL.SDL_SetRenderDrawColor(Render, R, G, B, A);
         }
     }
 }
