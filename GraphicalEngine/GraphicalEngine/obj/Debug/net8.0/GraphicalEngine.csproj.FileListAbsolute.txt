@@ -1,6 +1,4 @@
-G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\GraphicalEngine.exe
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\GraphicalEngine.deps.json
-G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\GraphicalEngine.runtimeconfig.json
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\GraphicalEngine.dll
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\GraphicalEngine.pdb
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\obj\Debug\net8.0\GraphicalEngine.GeneratedMSBuildEditorConfig.editorconfig
@@ -10,7 +8,6 @@ G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\obj\Debug\net8.0\Graphica
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\obj\Debug\net8.0\GraphicalEngine.dll
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\obj\Debug\net8.0\refint\GraphicalEngine.dll
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\obj\Debug\net8.0\GraphicalEngine.pdb
-G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\obj\Debug\net8.0\GraphicalEngine.genruntimeconfig.cache
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\obj\Debug\net8.0\ref\GraphicalEngine.dll
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\libFLAC-8.dll
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\libjpeg-9.dll
@@ -28,7 +25,10 @@ G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\SDL2_ima
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\SDL2_mixer.dll
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\SDL2_ttf.dll
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\zlib1.dll
-G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\Sayers.SDL2.Core.dll
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\obj\Debug\net8.0\GraphicalEngine.csproj.AssemblyReference.cache
-G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\obj\Debug\net8.0\GraphicalEngine.csproj.CopyComplete
 G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\obj\Debug\net8.0\GraphicalEngine.sourcelink.json
+G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\GraphicalEngine.exe
+G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\GraphicalEngine.runtimeconfig.json
+G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\bin\Debug\net8.0\Sayers.SDL2.Core.dll
+G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\obj\Debug\net8.0\GraphicalEngine.csproj.CopyComplete
+G:\GIT\GraphicalEngine\GraphicalEngine\GraphicalEngine\obj\Debug\net8.0\GraphicalEngine.genruntimeconfig.cache

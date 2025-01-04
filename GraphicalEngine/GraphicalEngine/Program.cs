@@ -11,7 +11,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        const int SDL_NUM_SCANCODES = 512;
+
         uint delay_frame = 16;
         //Init Process
         Screen.Init();
@@ -45,50 +45,72 @@ class Program
                 
             }
 
-            //Keyboard Control
-            IntPtr keyStatePtr = SDL.SDL_GetKeyboardState(out _);
-            byte[] keyState = new byte[SDL_NUM_SCANCODES];
-            Marshal.Copy(keyStatePtr, keyState, 0, keyState.Length);
+            KeyboardProcessor.UpdateState(); //Update the status of all the keys in KeyboardProcessor
 
-            //Read of Keyboard keys
-            if (keyState[(int)SDL.SDL_Scancode.SDL_SCANCODE_UP] != 0)
+            //All the functions to the keys
+            if (KeyboardProcessor.KeysState["UP"])
             {
                 cubeFig.PosY--;
             }
-            if (keyState[(int)SDL.SDL_Scancode.SDL_SCANCODE_DOWN] != 0)
+            
+            if (KeyboardProcessor.KeysState["DOWN"])
             {
                 cubeFig.PosY++;
             }
-            if (keyState[(int)SDL.SDL_Scancode.SDL_SCANCODE_LEFT] != 0)
+            if (KeyboardProcessor.KeysState["LEFT"])
             {
                 cubeFig.PosX--;
             }
-            if (keyState[(int)SDL.SDL_Scancode.SDL_SCANCODE_RIGHT] != 0)
+            if (KeyboardProcessor.KeysState["RIGHT"])
             {
                 cubeFig.PosX++;
             }
-            if (keyState[(int)SDL.SDL_Scancode.SDL_SCANCODE_W] != 0)
+            if (KeyboardProcessor.KeysState["W"])
             {
                 cubeFig.RotX--;
             }
-            if (keyState[(int)SDL.SDL_Scancode.SDL_SCANCODE_A] != 0)
+            if (KeyboardProcessor.KeysState["A"])
             {
                 cubeFig.RotY++;
             }
-            if (keyState[(int)SDL.SDL_Scancode.SDL_SCANCODE_S] != 0)
+            if (KeyboardProcessor.KeysState["S"])
             {
                 cubeFig.RotX++;
             }
-            if (keyState[(int)SDL.SDL_Scancode.SDL_SCANCODE_D] != 0)
+            if (KeyboardProcessor.KeysState["D"])
             {
                 cubeFig.RotY--;
             }
-            if (keyState[(int)SDL.SDL_Scancode.SDL_SCANCODE_Z] != 0)
+            if (KeyboardProcessor.KeysState["R"])
+            {
+                cubeFig.Width--;
+            }
+            if (KeyboardProcessor.KeysState["T"])
+            {
+                cubeFig.Width++;
+            }
+            if (KeyboardProcessor.KeysState["F"])
+            {
+                cubeFig.Height--;
+            }
+            if (KeyboardProcessor.KeysState["G"])
+            {
+                cubeFig.Height++;
+            }
+            if (KeyboardProcessor.KeysState["V"])
+            {
+                cubeFig.Length--;
+            }
+            if (KeyboardProcessor.KeysState["B"])
+            {
+                cubeFig.Length++;
+            }
+            if (KeyboardProcessor.KeysState["Z"])
             {
                 cubeFig.RotY = 0;
                 cubeFig.RotX = 0;
             }
-            if (keyState[(int)SDL.SDL_Scancode.SDL_SCANCODE_X] != 0)
+            if (KeyboardProcessor.KeysState["X"])
             {
                 if(delay_frame == 16)
                 {
@@ -99,6 +121,10 @@ class Program
                     delay_frame = 16;
                 }
                 
+            }
+            if (KeyboardProcessor.KeysState["ESC"])
+            {
+                quit = true;
             }
 
 

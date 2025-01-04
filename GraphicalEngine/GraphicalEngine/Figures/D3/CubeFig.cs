@@ -36,12 +36,10 @@ namespace GraphicalEngine.Figures.D3
             RotX = rotX;
             RotY = rotY;
 
-            Initialize();
         }
 
         public CubeFig()
         {
-            Initialize();
         }
 
 
@@ -106,6 +104,7 @@ namespace GraphicalEngine.Figures.D3
 
         public void Draw()
         {
+            Initialize();
             SDL.SDL_SetRenderDrawColor(Render, 0, 0, 255, 0);
             SDL.SDL_RenderDrawPoint(Render, PosX, PosY);
             // Draw all the Cube lines

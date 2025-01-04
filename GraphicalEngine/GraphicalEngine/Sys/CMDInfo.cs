@@ -33,11 +33,15 @@ namespace GraphicalEngine.Sys
                 Console.WriteLine();
                 Console.WriteLine(" Cube:");
                 Console.WriteLine(" W A S D  -> Rotation");
-                Console.WriteLine("   Setas  -> Movement");
+                Console.WriteLine("  Arrows  -> Movement");
                 Console.WriteLine("       Z  -> Default Rotation");
+                Console.WriteLine("     R T  -> Width (+ -)");
+                Console.WriteLine("     F G  -> Height (+ -)");
+                Console.WriteLine("     V B  -> Length (+ -)");
                 Console.WriteLine();
                 Console.WriteLine(" Application:");
                 Console.WriteLine("       X  -> Change Max FPS (30/60)");
+                Console.WriteLine("     ESC  -> Exit");
 
                 frameInSecond = 0;
                 time = DateTime.Now;
